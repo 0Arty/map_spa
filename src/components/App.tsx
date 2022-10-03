@@ -1,10 +1,15 @@
 import React from 'react'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import Map from './Map'
+import MapBox from './map/map'
+import './App.module.scss'
+import Header from './header/Header'
 
 const App = () => {
   return (
-      <Map />
+  <>
+    <Header />
+    <MapBox />
+  </>
   );
 }
 

@@ -3,8 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { reducer as mapDetails } from './map/details'
 
 const rootReducer = () => combineReducers({
-  // add new slices here
-  mapDetails
+  mapDetails,
 })
 
 export const store = configureStore({
