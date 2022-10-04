@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { reducer as mapDetails } from './map/details'
+import { reducer as filterDetails } from './filter/details'
 
 const rootReducer = () => combineReducers({
   mapDetails,
+  filterDetails,
 })
 
 export const store = configureStore({

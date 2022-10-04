@@ -1,0 +1,35 @@
+.list{
+    display: flex;
+}
+.list:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.list > div{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.list > span {
+    padding-left: 20px ;
+    color: white;
+}
+
+.list > .checkbox{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 10px 0;
+    border: none;
+    outline: none;
+}
+
+.list > input[type=checkbox] {
+    border-radius: 10px 0;
+}

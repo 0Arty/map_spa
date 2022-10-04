@@ -1,12 +1,13 @@
 .header_block {
-    width: 100%;
     min-height: 30px;
-    position: absolute;
+    position: absolute;  
     z-index: 100;
+    margin-top: 18px;
     display: flex;
     justify-content: center;
-    margin-top: 18px;
-
+    width: 60%;
+    margin: 18px 20% 0 20%;
+    /* margin: 10px auto; */
 }
 
 .btns {
@@ -15,17 +16,13 @@
     font-weight: 800;
     font-size: 18px;
     line-height: 27px;
-
 }
-
 .btns>ul {
     display: flex;
     flex-direction: row;
 }
-.btns > ul > li:not(:last-child){
-    margin-right:40px ;
-}
 .btns > ul > li{transition: 0.3s;}
+.btns > ul > li:not(:last-child){margin-right:40px;}
 .btns > ul > li:hover{
     cursor: pointer;
     scale:120%;

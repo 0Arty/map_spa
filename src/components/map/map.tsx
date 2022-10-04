@@ -1,18 +1,33 @@
-import Map, { GeolocateControl } from "react-map-gl";
+import Map, { GeolocateControl, Layer, Marker, NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import style from './Map.module.css'
 const MapBox = () => {
 
-    
-    // const s = require('./map.module.css')
+    //testing 
+    const markersArray = [
+        <Marker
+            longitude={30.31428}
+            latitude={50.272796}
+            onClick={() => { console.log('you clicked on me!') }}
+            key={1}
+        />,
+        <Marker
+            longitude={30.51428}
+            latitude={50.472342}
+            onClick={() => { console.log('you clicked on me!') }}
+            key={2}
+        />,
+    ]
+    //testing 
     return (
-        <div style={{width:'100vw', height:'100vh'}}>
+        <div className={style.content_map}>
             <Map
                 mapboxAccessToken={process.env.REACT_APP_MAP_GL_TOKEN}
                 initialViewState={{
-                    longitude: -100,
-                    latitude: 40,
-                    zoom: 1,  
+                    longitude: 30.31428,
+                    latitude: 50.27279,
+                    zoom: 2,
                 }}
                 projection='globe'
                 mapStyle="mapbox://styles/zeroarty/cl5znwb9v000q15pnr1uxzjmm"
@@ -21,8 +36,9 @@ const MapBox = () => {
                     positionOptions={{ enableHighAccuracy: true }}
                     trackUserLocation={true}
                 />
+                <NavigationControl />
+                {markersArray}
             </Map>
-
         </div>
     )
 }
