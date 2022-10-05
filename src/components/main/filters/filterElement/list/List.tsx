@@ -12,7 +12,7 @@ export interface ListInterface {
 const List = ({filterName} : ListInterface) => {
     return (
         <div className={style.list}>
-            <div>
+            <div className={style.container}>
                 <input type='checkbox' className={style.checkbox} />
             </div>
 

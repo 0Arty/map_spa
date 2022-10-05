@@ -11,12 +11,14 @@ const FilterGroup = () => {
                 <div className={classNames(style.element, style.element_2)}></div>
             </div>
             <div className={style.filter_name}>
-                <List filterName={'filter 1'}/>
-                <List filterName={'filter 1'}/>
-                <List filterName={'filter 1'}/>
-                <List filterName={'filter 1'}/>
-                <List filterName={'filter 1'}/>
-                <List filterName={'filter 1'}/>
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+                <List filterName={'filter 1'} />
+
             </div>
         </div>
 
