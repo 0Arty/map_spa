@@ -4,15 +4,19 @@ import MapBox from './map/Map'
 import './App.module.scss'
 import Header from './main/header/Header'
 import Filters from './main/filters/Filters'
+import style from './App.module.scss'
+import Help from './main/helpMenu/Help'
 
 const App = () => {
   return (
-  <>
-    <Header />
-    
-    <Filters />
-    <MapBox />
-  </>
+    <>
+      <div className={style.container}>
+        <Header />
+        <Help/>
+        <Filters />
+      </div>
+      <MapBox />
+    </>
   );
 }
 

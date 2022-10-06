@@ -4,7 +4,6 @@ interface filterState {
     filtersIsOpen: boolean
 
 }
-
 const stateAdapter = createEntityAdapter()
 
 const initialState = stateAdapter.getInitialState<filterState>({

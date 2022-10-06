@@ -1,7 +1,9 @@
-import Map, { GeolocateControl, Layer, Marker, NavigationControl } from "react-map-gl";
+import Map, { GeolocateControl, Marker, NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import style from './Map.module.css'
+import { useAppSelector } from "../../store/root";
+
 const MapBox = () => {
 
     //testing 

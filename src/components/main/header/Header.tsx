@@ -1,27 +1,21 @@
 import React from 'react';
 import styles from './Header.module.css'
 import { useAppDispatch, useAppSelector } from '../../../store/root'
-import {setFilterIsOpen} from '../../../store/filter/details'
-
+import { closeAllWindows, setContactIsOpen, setFiltersIsOpen, setHelpIsOpen, setInformationIsOpen } from '../../../store/slices/headerSlice';
+import classNames from 'classnames';
 
 const Header = () => {
-
-    //@ts-ignore
     const dispatch = useAppDispatch()
-    //@ts-ignore
-    const openFilter = () => {
-
-    }
 
     return (
         <div className={styles.header_block}>
             <div className={styles.btns}>
                 <ul>
-                    <li>Logo</li>
-                    <li onClick={openFilter}>Filters</li>
-                    <li>Help</li>
-                    <li>Contact</li>
-                    <li>Info</li>
+                    <li onClick={(e) => { dispatch(closeAllWindows(null)) }}>Logo</li>
+                    <li onClick={(e) => { dispatch(setFiltersIsOpen('open')) }}>   Filters     </li>
+                    <li onClick={(e) => { dispatch(setHelpIsOpen('open')) }}>   Help        </li>
+                    <li onClick={(e) => { dispatch(setContactIsOpen('open')) }}>   Contact     </li>
+                    <li onClick={(e) => { dispatch(setInformationIsOpen('open')) }}>   Info        </li>
                 </ul>
             </div>
         </div>

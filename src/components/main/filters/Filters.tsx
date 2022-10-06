@@ -3,36 +3,32 @@ import { useState } from 'react';
 import FilterGroup from './filterElement/FilterGroup';
 import FilterInput from './filterInput/FilterInput';
 import style from './Filters.module.css'
+import { useAppSelector } from '../../../store/root'
+import FilterHeading from './filterHeading/FilterHeading';
+
 
 const Filters = () => {
 
 
-    const [IsOpen, setIsOpen] = useState(true)
+    const filters = useAppSelector(state => state.headerDetails.filtersIsOpen)
 
     return (
-        <>
-            <button style={{ width: '20px', height: '15px', position: 'absolute', zIndex: 150 }} onClick={() => {
-                setIsOpen(!IsOpen)
-            }}>
+        <AnimatePresence>
+            {filters && (
+                <motion.div
+                    initial={{ x: 0, y: -1000, opacity: 0.4 }}
+                    animate={{ opacity: 1, x: 0, y: 0}}
+                    exit={{ opacity: 0.4, y: 1000 }}
+                    transition={{ duration: 0.8 }}
+                    className={style.wrapper}
+                >
 
-            </button>
-            <AnimatePresence>
-                {IsOpen && (
-                    <motion.div
-                        initial={{ x: -500, opacity: 0.4, }}
-                        animate={{ opacity: 1, x: 0, }}
-                        exit={{ opacity: 0.4, x: -500, }}
-                        transition={{ duration: 0.7 }}
-                        className={style.wrapper}
-                    >
-                        <h1>Filters</h1>
-                        <FilterInput />
-                        <FilterGroup />
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-        </>
+                    <FilterHeading />
+                    <FilterInput />
+                    <FilterGroup />
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }
 export default Filters;

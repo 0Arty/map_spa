@@ -1,13 +1,9 @@
 .header_block {
     min-height: 30px;
-    position: absolute;  
-    z-index: 100;
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    margin: 18px 20% 0 20%;
+    position: relative;  
+    /* margin: 18px 20% 0 20%; */
     /* margin: 10px auto; */
+    margin: 20px 0 0 40px;
 }
 
 .btns {
@@ -27,4 +23,7 @@
     cursor: pointer;
     scale:120%;
     transition: 0.4s;
+}
+
+@media screen and (min-width: 1200px){
 }

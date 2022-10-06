@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { store } from './store/root'
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 )
@@ -16,5 +15,6 @@ root.render(
     </Provider>
   </React.StrictMode>,
 )
+
 
 reportWebVitals()
