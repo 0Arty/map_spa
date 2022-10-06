@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from './Header.module.css'
-import { useAppDispatch, useAppSelector } from '../../../store/root'
+import styles from './Header.module.scss'
+import { useAppDispatch} from '../../../store/root'
 import { closeAllWindows, setContactIsOpen, setFiltersIsOpen, setHelpIsOpen, setInformationIsOpen } from '../../../store/slices/headerSlice';
-import classNames from 'classnames';
 
 const Header = () => {
     const dispatch = useAppDispatch()

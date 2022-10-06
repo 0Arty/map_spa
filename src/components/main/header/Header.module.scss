@@ -1,0 +1,23 @@
+.header_block {
+    margin: 20px 15px 10px 40px;
+    .btns {
+        color: #ffffff;
+        filter: drop-shadow(0px 2px 4px #000000);
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 27px;
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            li{transition: 0.3s;}
+            li:not(:last-child){margin-right:40px;}
+            li:hover{
+                cursor: pointer;
+                scale:120%;
+                transition: 0.4s;
+            }
+        }
+    }
+}
+

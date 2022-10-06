@@ -8,5 +8,6 @@
 .container{
     position: absolute;
     z-index: 95;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
