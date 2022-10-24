@@ -21,8 +21,6 @@ $gray: #9b9b9b;
     background: transparent;
     transition: border-color 0.2s;
     filter: drop-shadow(0px 2px 4px #000000);
-    
-
     &::placeholder {
         color: transparent;
     }
@@ -39,7 +37,6 @@ $gray: #9b9b9b;
     transition: 0.2s;
     font-size: 1rem;
     color: $gray;
-    
 }
 .form__field:focus {
     ~.form__label {
@@ -57,7 +54,6 @@ $gray: #9b9b9b;
     border-image: linear-gradient(to right, $primary, $secondary);
     border-image-slice: 1;
 }
-
 .form__field {
     &:required,
     &:invalid {

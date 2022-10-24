@@ -2,26 +2,28 @@ import Map, { GeolocateControl, Marker, NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import style from './Map.module.css'
-import { useAppSelector } from "../../store/root";
 
 const MapBox = () => {
 
-    //testing 
+    //testing  ---------------------------------------------------------------------------------------------------------------
     const markersArray = [
         <Marker
             longitude={30.31428}
             latitude={50.272796}
             onClick={() => { console.log('you clicked on me!') }}
-            key={1}
+            key={1111111111111111}
         />,
         <Marker
             longitude={30.51428}
             latitude={50.472342}
             onClick={() => { console.log('you clicked on me!') }}
-            key={2}
+            key={11111111111111112}
         />,
     ]
-    //testing 
+    //testing -------------------------------------------------------------------------------------
+
+
+
     return (
         <div className={style.content_map}>
             <Map

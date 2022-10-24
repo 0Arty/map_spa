@@ -21,6 +21,8 @@ const headerDetails = createSlice({
     name: 'headerDetails',
     initialState,
     reducers: {
+
+        // думаю як його зробити краще, поки таке рішення
         setFiltersIsOpen(state, action: PayloadAction<string>) {
             if(action.payload === 'open'){
                 state.filtersIsOpen = true
@@ -65,7 +67,7 @@ const headerDetails = createSlice({
                 state.informationIsOpen = false
             }
         },
-        closeAllWindows(state, acrtion: PayloadAction<null>){
+        closeAllWindows(state, action: PayloadAction<null>){
             state.informationIsOpen = false
             state.filtersIsOpen = false
             state.contactIsOpen = false

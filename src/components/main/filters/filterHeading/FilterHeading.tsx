@@ -1,5 +1,4 @@
-import React from 'react';
-import style from './FilterHeading.module.css'
+import style from './FilterHeading.module.scss'
 import { useAppDispatch } from '../../../../store/root'
 import { setFiltersIsOpen } from '../../../../store/slices/headerSlice';
 

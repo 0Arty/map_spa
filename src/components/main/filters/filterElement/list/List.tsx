@@ -1,12 +1,9 @@
 import React from 'react';
-import style from './List.module.css'
-import PropTypes from 'prop-types'
+import style from './List.module.scss'
 
-export interface ListInterface {
+interface ListInterface {
     filterName : string
 } 
-
-
 
 
 const List = ({filterName} : ListInterface) => {

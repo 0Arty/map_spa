@@ -1,4 +1,3 @@
-import React from 'react'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import MapBox from './map/Map'
 import './App.module.scss'
@@ -16,40 +15,37 @@ const App = () => {
   return (
     <>
       <div className={style.container}>
-
         <Header />
+        <div className={style.box}>
+          <AnimateSharedLayout>
+            <AnimatePresence>
+              {helpIsOpen && (
+                <motion.div
+                  layout
+                  initial={{ y: -1000, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 1000, opacity: 0, position: 'absolute' }}
+                  transition={{ duration: 0.7 }}
+                >
+                  <Help />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-        <AnimateSharedLayout>
-          
-          <AnimatePresence>
-          {helpIsOpen && (
-            <motion.div
-              layout
-              initial={{ y: -1000, opacity: 0.4 }}
-              animate={{  y: 0, opacity: 1}}
-              exit={{y: 1000, opacity: 0.4,position:'absolute' }}
-              transition={{ duration: 0.7 }}
-            >
-              <Help />
-            </motion.div>
-          )}
-          </AnimatePresence>
-
-          <AnimatePresence>
-          {filtersIsOpen && ( <motion.div
-              layout
-              initial={{ y: -1000, opacity: 0.4 }}
-              animate={{  y: 0, opacity: 1}}
-              exit={{y: 1000, opacity: 0.4,position:'absolute' }}
-              transition={{ duration: 0.7 }}
-            >
-              <Filters />
-            </motion.div>
-            )}
-          </AnimatePresence>
-        </AnimateSharedLayout>
-
-
+            <AnimatePresence>
+              {filtersIsOpen && (<motion.div
+                layout
+                initial={{ y: -1000, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 1000, opacity: 0, position: 'absolute' }}
+                transition={{ duration: 0.7 }}
+              >
+                <Filters />
+              </motion.div>
+              )}
+            </AnimatePresence>
+          </AnimateSharedLayout>
+        </div>
       </div>
       <MapBox />
     </>

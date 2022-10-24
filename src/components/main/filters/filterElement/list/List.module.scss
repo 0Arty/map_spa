@@ -1,0 +1,46 @@
+.list{
+    display: flex;
+    vertical-align: middle;
+    width: 200px;
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+    span {
+        padding-left: 20px ;
+        color: white;
+        transition: 0.4s;
+        &:hover{
+            scale: 1.1;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+    .container{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background-color: white;
+        border-radius: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .checkbox{
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            border-radius: 10px 0;
+            border: none;
+            outline: none;
+        }
+        input[type=checkbox] {
+            border-radius: 10px 0;
+        }
+        input:hover{
+            cursor: pointer;
+        }
+    }
+}

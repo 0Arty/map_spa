@@ -1,7 +1,8 @@
 .wrapper {
-    width: 422px;
+    width: 442px;
     min-height: 100px;
     position: relative;
-    margin-left: 40px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }

@@ -1,0 +1,51 @@
+.filterGroup {
+    display: flex;
+    flex-direction: row;
+    width: 422px;
+    height: 250px;
+    border-radius: 50px 0 50px 0;
+    background-color: #7A66CC;
+    overflow: hidden;
+    .box {
+        display: flex;
+        width: 200px;
+        .element {
+            width: 100px;
+            height: 140%;
+            transition: 0.5s;
+        }
+        .element:hover {
+            width: 150px;
+            transition: 0.5s;
+        }
+        .element_1 {
+            background-color: tomato;
+            transform: rotate(10deg) translateY(-20px) translateX(-25px);
+        }
+        .element_2 {
+            background-color: teal;
+            transform: rotate(10deg) translateY(-15px) translateX(-25px);
+        }
+    }
+    .filter_name {
+        margin: 20px;
+        position: relative;
+        height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #708ad4 #e0e0e0;
+    }
+    .filter_name::-webkit-scrollbar {
+        width: 5px;
+    }
+    .filter_name::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-radius: 100px;
+    }
+    .filter_name::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+        box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        border-radius: 100px;
+    }
+}
