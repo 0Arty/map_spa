@@ -31,7 +31,7 @@ const MapBox = () => {
                 initialViewState={{
                     longitude: 30.31428,
                     latitude: 50.27279,
-                    zoom: 2,
+                    zoom: 1.5,
                 }}
                 projection='globe'
                 mapStyle="mapbox://styles/zeroarty/cl5znwb9v000q15pnr1uxzjmm"

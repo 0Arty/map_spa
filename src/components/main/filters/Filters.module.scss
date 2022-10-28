@@ -1,20 +1,16 @@
-.filterGroup {
+.wrapper {
+    width: 470px;
+    min-height: 100px;
+    position: relative;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-    width: 422px;
-    height: 250px;
-    border-radius: 50px 0 50px 0;
-    background-color: #7A66CC;
-    overflow: hidden;
-    &:not(:last-child){
-        margin-bottom: 20px;
-    }
-    .filter_name {
-        margin: 20px;
-        position: relative;
-        height: 200px;
-        overflow-y:auto;
+    .box{
+        height: 270px;
+
+        overflow-y: auto;
         overflow-x: hidden;
+        padding-right: 30px;
         scrollbar-width: thin;
         scroll-behavior: smooth;
         scrollbar-color: #708ad4 #e0e0e0;

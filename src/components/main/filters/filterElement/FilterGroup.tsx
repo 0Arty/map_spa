@@ -1,6 +1,6 @@
-import classNames from 'classnames';
 import React from 'react';
 import style from './FilterGroup.module.scss'
+import FilterImages from './filterImages/FilterImages';
 import List from './list/List';
 
 interface groupProps {
@@ -8,7 +8,7 @@ interface groupProps {
         isOpen: boolean,
         id: string,
         filters: {
-            filter1: {
+            [filter: string]: {
                 name: string,
                 onChecked: boolean
                 id: number
@@ -26,10 +26,7 @@ const FilterGroup = ({ establishmentTypes }: groupProps) => {
     return (
         <> {establishmentTypes.isOpen && (
             <div className={style.filterGroup}>
-                <div className={style.box}>
-                    <div className={classNames(style.element, style.element_1)}></div>
-                    <div className={classNames(style.element, style.element_2)}></div>
-                </div>
+                <FilterImages />
                 <div className={style.filter_name}>
                     {filtersList}
                 </div>

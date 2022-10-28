@@ -1,0 +1,21 @@
+.box {
+    display: flex;
+    width: 200px;
+    .element {
+        width: 100px;
+        height: 140%;
+        transition: 0.5s;
+    }
+    .element:hover {
+        width: 150px;
+        transition: 0.5s;
+    }
+    .element_1 {
+        background-color: tomato;
+        transform: rotate(10deg) translateY(-20px) translateX(-25px);
+    }
+    .element_2 {
+        background-color: teal;
+        transform: rotate(10deg) translateY(-15px) translateX(-25px);
+    }
+}

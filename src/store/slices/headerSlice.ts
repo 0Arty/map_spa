@@ -5,8 +5,6 @@ interface headerState {
     helpIsOpen: boolean
     contactIsOpen: boolean
     informationIsOpen: boolean
-
-
 }
 const stateAdapter = createEntityAdapter()
 
@@ -17,67 +15,44 @@ const initialState = stateAdapter.getInitialState<headerState>({
     informationIsOpen: false,
 })
 
+const closeAll = (state: headerState) => {
+    state.filtersIsOpen = false
+    state.helpIsOpen = false
+    state.contactIsOpen = false
+    state.informationIsOpen = false
+}
+
 const headerDetails = createSlice({
     name: 'headerDetails',
     initialState,
     reducers: {
-
-        // думаю як його зробити краще, поки таке рішення
-        setFiltersIsOpen(state, action: PayloadAction<string>) {
-            if(action.payload === 'open'){
-                state.filtersIsOpen = true
-                state.helpIsOpen = false
-                state.contactIsOpen = false
-                state.informationIsOpen = false
-            }
-            else if(action.payload === 'close'){
-                state.filtersIsOpen = false
-            }
+        openFilters(state) {
+            closeAll(state)
+            state.filtersIsOpen = true
         },
-        setHelpIsOpen(state, action: PayloadAction<string>) {
-            if(action.payload === 'open'){
-                state.helpIsOpen = true
-                state.filtersIsOpen = false
-                state.contactIsOpen = false
-                state.informationIsOpen = false
-            }
-            else if(action.payload === 'close'){
-                state.helpIsOpen = false
-            }
+        openHelp(state) {
+            closeAll(state)
+            state.helpIsOpen = true
         },
-        setContactIsOpen(state, action: PayloadAction<string>) {
-            if(action.payload === 'open'){
-                state.contactIsOpen = true
-                state.filtersIsOpen = false
-                state.helpIsOpen = false
-                state.informationIsOpen = false
-            }
-            else if(action.payload === 'close'){
-                state.contactIsOpen = false
-            }
+        openContacts(state) {
+            closeAll(state)
+            state.contactIsOpen = true
         },
-        setInformationIsOpen(state, action: PayloadAction<string>) {
-            if(action.payload === 'open'){
-                state.informationIsOpen = true
-                state.filtersIsOpen = false
-                state.contactIsOpen = false
-                state.helpIsOpen = false
-            }
-            else if(action.payload === 'close'){
-                state.informationIsOpen = false
-            }
+        openInfo(state) {
+            closeAll(state)
+            state.informationIsOpen = true
         },
-        closeAllWindows(state, action: PayloadAction<null>){
-            state.informationIsOpen = false
-            state.filtersIsOpen = false
-            state.contactIsOpen = false
-            state.helpIsOpen = false
-        }
+        closeFilters(state) {state.filtersIsOpen = false},
+        closeHelp(state) {state.helpIsOpen = false},
+        closeContacts(state) {state.contactIsOpen = false},
+        closeInfo(state) {state.informationIsOpen = false },
+        closeAllWindows(state){closeAll(state)},
     },
 })
 
 export const reducer: Reducer<typeof initialState> = headerDetails.reducer
-export const { setFiltersIsOpen,setHelpIsOpen,setContactIsOpen,setInformationIsOpen,closeAllWindows } = headerDetails.actions
+export const { openFilters, openHelp,openContacts, openInfo, 
+    closeFilters, closeHelp,  closeContacts, closeInfo,closeAllWindows } = headerDetails.actions
 
 
 

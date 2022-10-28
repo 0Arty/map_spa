@@ -1,6 +1,6 @@
 import FilterGroup from './filterElement/FilterGroup';
 import FilterInput from './filterInput/FilterInput';
-import style from './Filters.module.css'
+import style from './Filters.module.scss'
 import FilterHeading from './filterHeading/FilterHeading';
 import { useAppSelector } from '../../../store/root';
 
@@ -10,16 +10,18 @@ const Filters = () => {
 
     const establishmentGroups = Object
         .values(establishmentTypes)
-        .map(estbType => <FilterGroup 
-            establishmentTypes={estbType} 
-            key={estbType.id}/>)
+        .map(estbType => <FilterGroup
+            establishmentTypes={estbType}
+            key={estbType.id} />)
 
     return (
         <div className={style.wrapper}>
             <div>
                 <FilterHeading />
                 <FilterInput />
-                {establishmentGroups}
+                <div className={style.box}>
+                    {establishmentGroups}
+                </div>
             </div>
         </div>
 

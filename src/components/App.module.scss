@@ -10,9 +10,18 @@
     z-index: 95;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 100vh;
     min-width: 100px;
     .box{
         margin-left: 40px;
     }
+    .open{
+        // height: 90vh;
+        height: 91vh;
+        transition: 0.7s;
+    }
+    .closed{
+        height: 0px;
+        transition: 2s;
+    }
 }
+

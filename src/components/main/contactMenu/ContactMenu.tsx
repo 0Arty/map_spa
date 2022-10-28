@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './Help.module.scss'
+import style from './ContactMenu.module.scss'
 
-const Help = () => {
+const ContactMenu = () => {
 
     return (
 
@@ -9,4 +9,4 @@ const Help = () => {
                 </div>
     );
 }
-export default Help;
+export default ContactMenu;

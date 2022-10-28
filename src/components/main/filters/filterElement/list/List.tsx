@@ -12,7 +12,6 @@ const List = ({filterName} : ListInterface) => {
             <div className={style.container}>
                 <input type='checkbox' className={style.checkbox} />
             </div>
-
             <span>{filterName}</span>
         </div>
     );
