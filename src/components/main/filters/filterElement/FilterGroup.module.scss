@@ -32,3 +32,35 @@
         }
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .filterGroup{
+        width: 470px;
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 768px) {
+    .filterGroup{
+        width: 420px;
+
+        .filter_name{
+            margin-left: -40px;
+        }
+    }
+}
+
+@media screen and (min-width: 416px) and (max-width: 520px) {
+    .filterGroup{
+        width: 360px;
+        .filter_name{
+            margin-left: -80px;
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 416px) {
+    .filterGroup{
+        width: 300px;
+        .filter_name{
+            margin-left: -160px;
+        }
+    }
+}
