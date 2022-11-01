@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import React from 'react';
-import style from './FilterInput.module.css'
 import style2 from './FilterInput.module.scss'
 
 const FilterInput = () => {

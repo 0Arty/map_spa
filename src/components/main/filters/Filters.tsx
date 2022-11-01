@@ -1,8 +1,8 @@
-import FilterGroup from './filterElement/FilterGroup';
-import FilterInput from './filterInput/FilterInput';
 import style from './Filters.module.scss'
-import FilterHeading from './filterHeading/FilterHeading';
 import { useAppSelector } from '../../../store/root';
+import FilterHeading from './filterHeading/FilterHeading';
+import FilterInput from './filterInput/FilterInput';
+import FilterGroup from './filterBody/FilterGroup';
 
 
 const Filters = () => {
@@ -12,17 +12,17 @@ const Filters = () => {
         .values(establishmentTypes)
         .map(estbType => <FilterGroup
             establishmentTypes={estbType}
-            key={estbType.id} />)
+            key={estbType.id} />
+        )
 
     return (
         <div className={style.wrapper}>
-            <div>
-                <FilterHeading />
+
+                <FilterHeading/>
                 <FilterInput />
                 <div className={style.box}>
                     {establishmentGroups}
                 </div>
-            </div>
         </div>
 
     );

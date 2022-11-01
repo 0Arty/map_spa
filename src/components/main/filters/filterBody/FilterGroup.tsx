@@ -24,14 +24,14 @@ const FilterGroup = ({ establishmentTypes }: groupProps) => {
         .map(estbType => <List filterName={estbType.name} key={estbType.id}/>)
 
     return (
-        <> {establishmentTypes.isOpen && (
+        <> 
             <div className={style.filterGroup}>
                 <FilterImages />
                 <div className={style.filter_name}>
                     {filtersList}
                 </div>
             </div>
-        )}
+        
         </>
     );
 }

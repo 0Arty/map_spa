@@ -35,12 +35,13 @@
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
     .filterGroup{
-        width: 470px;
+        width: 100%;
+
     }
 }
 @media screen and (min-width: 520px) and (max-width: 768px) {
     .filterGroup{
-        width: 420px;
+        width: 100%;
 
         .filter_name{
             margin-left: -40px;
@@ -50,17 +51,17 @@
 
 @media screen and (min-width: 416px) and (max-width: 520px) {
     .filterGroup{
-        width: 360px;
+        width: 100%;
         .filter_name{
             margin-left: -80px;
         }
     }
 }
-@media screen and (min-width: 320px) and (max-width: 416px) {
+@media screen and (max-width: 416px) {
     .filterGroup{
-        width: 300px;
+        width: 100%;
         .filter_name{
-            margin-left: -160px;
+            margin-left: -100px;
         }
     }
 }
